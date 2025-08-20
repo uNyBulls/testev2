@@ -1,399 +1,176 @@
-/* ===== Reset e Base ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Day Decorações — Mini decorações criativas e modernas para transformar seus momentos em lembranças inesquecíveis." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day Decorações 🎉✨</title>
+  <!-- Link para o CSS -->
+  <link rel="stylesheet" href="estilo.css" />
+  <!-- Script externo, se necessário -->
+  <script src="caminho/do/seu/arquivo/script.js" defer></script>
+  <style>
+    /* Estilo atualizado para botões principais */
+    .btn-primario {
+      background-color: #007bff; /* azul padrão */
+      color: #fff; /* texto branco */
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primario:hover {
+      background-color: #0056b3; /* tom mais escuro no hover */
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .btn-primario:focus {
+      outline: 3px solid #0056b3; /* destaque ao focar */
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
 
-/* Corrigido: adiciona padding-top ao body para evitar sobreposição do cabeçalho fixo */
-body {
-  font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-  background-color: #fafafa;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-  padding-top: 80px; /* Ajuste para a altura do seu cabeçalho fixo */
-}
+  <!-- Link de pular conteúdo ( acessibilidade) -->
+  <a class="skip-link" href="#inicio">Pular para conteúdo 🚀</a>
 
-/* ===== Tipografia ===== */
-h1, h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
+  <!-- Navbar -->
+  <nav aria-label="Navegação principal" class="navbar">
+    <div class="nav-inner wrapper">
+      <div class="logo-nome">
+        <img src="imagens/logo.png" alt="Logo Day Decorações" class="logo" />
+        <div class="titulo-loja">DAY DECORAÇÕES 🎈</div>
+      </div>
+      <ul class="menu">
+        <li><a href="#inicio">Início 🏠</a></li>
+        <li><a href="temas.html">Decorações 🎨</a></li>
+        <li><a href="festas.html">Festas Realizadas 🎉</a></li>
+        <li><a href="sobre.html">Sobre a Empresa 🏢</a></li>
+        <li><a href="contato.html">Contato 📞</a></li>
+      </ul>
+    </div>
+  </nav>
 
-/* ===== Links de Acessibilidade ===== */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #222;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 100;
-  transition: top 0.3s ease;
-}
-.skip-link:focus {
-  top: 0;
-}
+  <!-- Cabeçalho -->
+  <header id="inicio" class="cabecalho wrapper">
+    <img src="imagens/logo.png" alt="Logo Day Decorações" class="logo" loading="lazy" />
+    <h1 class="titulo-loja">DAY DECORAÇÕES 🎊</h1>
+    <p class="subtitulo">Transformando momentos em lembranças inesquecíveis ✨</p>
+  </header>
 
-/* ===== Seções e botões ===== */
-.duas-secoes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+  <section class="banner wrapper duas-secoes">
+    <!-- Temas -->
+    <div class="section-box">
+      <h2 class="section-title">Temas de Mini Decorações 🖼️</h2>
+      <p>Conheça nossos temas criativos para festas e eventos 🎈.</p>
+      <a href="temas.html" class="btn-primario">Ver Temas 📁</a>
+    </div>
+    <!-- Festas -->
+    <div class="section-box">
+      <h2 class="section-title">Festas Realizadas 🥳</h2>
+      <p>Veja algumas festas que já realizamos 🎂.</p>
+      <a href="festas.html" class="btn-primario">Ver Festas 🎥</a>
+    </div>
+  </section>
 
-/* Botões primários */
-.btn-primario {
-  background-color: #007bff;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 1.2em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-  text-decoration: none;
-}
-.btn-primario:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.btn-primario:focus {
-  outline: 3px solid #0056b3;
-  outline-offset: 2px;
-}
+  <!-- Corpo principal (se necessário, aqui pode colocar mais conteúdo) -->
 
-/* ===== Navegação (Navbar) ===== */
-nav {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  padding: 12px 24px;
-  position: fixed; /* aqui foi alterado de sticky para fixed */
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  transition: all 0.3s ease;
-}
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Day Decorações. Todos os direitos reservados. 🌟</p>
+  </footer>
 
-.nav-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+  <!-- Scripts de funcionalidades internas -->
+  <script>
+    // Animações fade-up
+    (function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    })();
 
-.logo-nome {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.logo {
-  width: 70px;
-  height: auto;
-  margin-right: 16px;
-}
-.titulo-loja {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-  font-weight: 700;
-  color: #222;
-}
+    // Lightbox para galeria (se houver)
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      if (overlay) {
+        const imgEl = document.getElementById('lbImg');
+        const capEl = document.getElementById('lbCap');
+        const btnPrev = document.getElementById('lbPrev');
+        const btnNext = document.getElementById('lbNext');
+        const btnClose = document.getElementById('lbClose');
 
-ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-ul li a {
-  text-decoration: none;
-  color: #555;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-ul li a:hover,
-ul li a.active {
-  background-color: #007bff;
-  color: #fff;
-}
+        const images = Array.from(document.querySelectorAll('.galeria .card img'));
+        let indexAtual = -1;
+        let lastFocused = null;
 
-/* ===== Cabeçalho principal com efeito de gradiente e sombra ===== */
-header.cabecalho {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 60px 20px;
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-  color: #fff;
-  text-align: center;
-}
-.titulo-loja {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-.subtitulo {
-  font-size: 1.2em;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.5;
-  font-weight: 400;
-}
+        images.forEach((img, i) => {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.setAttribute('aria-label', `Ampliar imagem: ${img.alt || 'foto'}`);
+          img.addEventListener('click', () => abrir(i));
+          img.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Enter' || ev.key === ' ') {
+              ev.preventDefault();
+              abrir(i);
+            }
+          });
+        });
 
-/* ===== Botões na página inicial com efeito de profundidade ===== */
-.botoes-inicio {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.botoes-inicio .btn {
-  padding: 16px 32px;
-  background: linear-gradient(135deg, #31ce01, #feb47b);
-  color: #fff;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1em;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-.botoes-inicio .btn:hover {
-  background: linear-gradient(135deg, #feb47b, #31ce01);
-  transform: translateY(-4px);
-}
+        function abrir(i) {
+          if (i < 0 || i >= images.length) return;
+          indexAtual = i;
+          const src = images[i].getAttribute('src');
+          const alt = images[i].getAttribute('alt') || '';
+          imgEl.src = src;
+          imgEl.alt = alt;
+          capEl.textContent = alt;
+          overlay.classList.add('open');
+          overlay.setAttribute('aria-hidden', 'false');
+          lastFocused = document.activeElement;
+          document.getElementById('lbClose').focus();
+          document.body.style.overflow = 'hidden';
+        }
 
-/* ===== Grid de temas e produtos com cartão e animações ===== */
-.grid-temas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-.card {
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.07);
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.card:hover img {
-  transform: scale(1.05);
-}
-.card-content {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.card strong {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.3em;
-  color: #222;
-}
-.solicitar-btn {
-  background-color: #1d7c00;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 20px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.solicitar-btn:hover {
-  background-color: #eb6750;
-  transform: translateY(-2px);
-}
+        function fechar() {
+          overlay.classList.remove('open');
+          overlay.setAttribute('aria-hidden', 'true');
+          imgEl.src = '';
+          document.body.style.overflow = '';
+          if (lastFocused) lastFocused.focus();
+        }
 
-/* ===== Seção de festas (galeria) ===== */
-.festas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin-top: 60px; /* Espaçamento superior ajustado */
-  padding: 20px;
-}
+        function prox() { abrir((indexAtual + 1) % images.length); }
+        function ant() { abrir((indexAtual - 1 + images.length) % images.length); }
 
-/* ===== Card de festas ===== */
-.festa-card {
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.07);
-  overflow: hidden;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s ease;
-  padding: 15px;
-}
-.festa-card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-.festa-card:hover img {
-  transform: scale(1.05);
-}
-.card-content {
-  margin-top: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em;
-  color: #222;
-  text-align: center;
-}
+        document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); ant(); });
+        document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); prox(); });
+        document.getElementById('lbClose').addEventListener('click', (e) => { e.stopPropagation(); fechar(); });
 
-/* ===== Formulário ===== */
-#formulario-container {
-  background-color: #fff;
-  max-width: 750px;
-  margin: 60px auto;
-  padding: 50px 30px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-#formulario-container h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2em;
-  margin-bottom: 35px;
-  text-align: center;
-  color: #222;
-}
-label {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #555;
-}
-input[type="text"],
-input[type="email"],
-input[type="date"],
-select,
-textarea {
-  width: 100%;
-  padding: 16px;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1em;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="date"]:focus,
-select:focus,
-textarea:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 12px rgba(0,123,255,0.2);
-}
-button[type="submit"] {
-  margin-top: 40px;
-  width: 100%;
-  padding: 18px;
-  background-color: #28a745;
-  color: #fff;
-  font-size: 1.3em;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-button[type="submit"]:hover {
-  background-color: #218838;
-  transform: translateY(-2px);
-}
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) fechar();
+        });
 
-/* ===== Rodapé ===== */
-footer {
-  margin-top: 60px;
-  padding: 30px 20px;
-  background-color: #fff;
-  text-align: center;
-  color: #777;
-  font-size: 0.95em;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
-}
-
-/* ===== Animações fade-up ===== */
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.fade-up.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== Responsividade geral ===== */
-@media(max-width: 1024px) {
-  body {
-    padding: 15px;
-  }
-  .botoes-inicio {
-    gap: 15px;
-  }
-}
-@media(max-width: 768px) {
-  nav {
-    padding: 10px 15px;
-  }
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  ul li {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .grid-temas,
-  .festas {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  #formulario-container {
-    padding: 30px 20px;
-    margin: 30px 10px;
-  }
-  #formulario-container h2 {
-    font-size: 1.8em;
-  }
-  button[type="submit"] {
-    padding: 14px;
-  }
-  .logo-nome {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .logo {
-    margin-bottom: 10px;
-  }
-}
+        document.addEventListener('keydown', (e) => {
+          if (!overlay.classList.contains('open')) return;
+          if (e.key === 'Escape') fechar();
+          if (e.key === 'ArrowRight') prox();
+          if (e.key === 'ArrowLeft') ant();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
