@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Corrigido: adiciona padding-top ao body para evitar sobreposição do cabeçalho sticky */
 body {
   font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
   background-color: #fafafa;
   color: #333;
   line-height: 1.6;
   padding: 20px;
+  padding-top: 100px; /* Ajuste aqui conforme a altura do seu cabeçalho */
 }
 
 /* ===== Tipografia ===== */
@@ -34,17 +36,18 @@ h1, h2 {
   top: 0;
 }
 
+/* ===== Seções e botões ===== */
 .duas-secoes {
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 20px; /* espaço entre os botões */
-  flex-wrap: wrap; /* permite quebra em telas pequenas */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Estilo aprimorado para botões "Ver Temas" e "Ver Festas" */
+/* Botões primários */
 .btn-primario {
-  background-color: #007bff; /* cor azul padrão */
-  color: #fff; /* cor do texto */
+  background-color: #007bff;
+  color: #fff;
   padding: 14px 28px;
   border-radius: 8px;
   border: none;
@@ -53,16 +56,15 @@ h1, h2 {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-  text-decoration: none; /* garante que o link fique sem underline */
-  display: inline-block;
+  text-decoration: none;
 }
 .btn-primario:hover {
-  background-color: #0056b3; /* tom mais escuro no hover */
+  background-color: #0056b3;
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .btn-primario:focus {
-  outline: 3px solid #0056b3; /* destaque ao focar */
+  outline: 3px solid #0056b3;
   outline-offset: 2px;
 }
 
@@ -85,10 +87,10 @@ nav {
   align-items: center;
 }
 
-/* Logo e Título */
 .logo-nome {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 .logo {
   width: 70px;
@@ -102,11 +104,11 @@ nav {
   color: #222;
 }
 
-/* ===== Menu de Navegação ===== */
 ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 ul li a {
   text-decoration: none;
@@ -161,7 +163,6 @@ header.cabecalho {
   font-weight: 700;
   font-size: 1.1em;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: all 0.3s ease, transform 0.2s;
 }
 .botoes-inicio .btn:hover {
   background: linear-gradient(135deg, #feb47b, #31ce01);
@@ -183,11 +184,10 @@ header.cabecalho {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-/* Aqui está o ajuste nas imagens das festas */
 .card img {
   width: 100%;
-  max-width: 300px; /* Limita a largura máxima da imagem */
-  height: auto; /* Mantém a proporção da imagem */
+  max-width: 300px;
+  height: auto;
   display: block;
   cursor: pointer;
   transition: transform 0.3s;
@@ -216,23 +216,22 @@ header.cabecalho {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
 }
 .solicitar-btn:hover {
   background-color: #eb6750;
   transform: translateY(-2px);
 }
 
-/* ===== Estilo para a seção de festas (galeria de festas) ===== */
+/* ===== Seção de festas (galeria) ===== */
 .festas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 60px; /* Espaçamento superior ajustado */
   padding: 20px;
 }
 
-/* Cartões das festas */
+/* ===== Card de festas ===== */
 .festa-card {
   background-color: #fff;
   border-radius: 20px;
@@ -245,11 +244,9 @@ header.cabecalho {
   transition: all 0.3s ease;
   padding: 15px;
 }
-
-/* Imagens das festas com efeito ao passar o mouse */
 .festa-card img {
   width: 100%;
-  max-width: 300px; /* Limite de largura */
+  max-width: 300px;
   height: auto;
   display: block;
   border-radius: 10px;
@@ -258,8 +255,6 @@ header.cabecalho {
 .festa-card:hover img {
   transform: scale(1.05);
 }
-
-/* Texto do cartão */
 .card-content {
   margin-top: 15px;
   font-family: 'Montserrat', sans-serif;
@@ -353,7 +348,7 @@ footer {
   transform: translateY(0);
 }
 
-/* ===== Responsividade ===== */
+/* ===== Responsividade geral ===== */
 @media(max-width: 1024px) {
   body {
     padding: 15px;
@@ -378,7 +373,8 @@ footer {
     width: 100%;
     margin-bottom: 10px;
   }
-  .grid-temas {
+  .grid-temas,
+  .festas {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
   }
@@ -391,5 +387,12 @@ footer {
   }
   button[type="submit"] {
     padding: 14px;
+  }
+  .logo-nome {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo {
+    margin-bottom: 10px;
   }
 }
