@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-/* Body com padding top para cabeçalho fixo, fonte moderna e fundo suave */
+/* Fonte principal global para todo o site */
 body {
-  font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
   background-color: #fafafa;
   color: #333;
   line-height: 1.6;
@@ -23,51 +23,32 @@ h1, h2 {
   margin-bottom: 15px;
 }
 
-/* Links acessíveis de navegação rápida */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #222;
+/* Cabeçalho com efeito de gradiente e sombra */
+header.cabecalho {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
   color: #fff;
-  padding: 8px 16px;
-  z-index: 100;
-  transition: top 0.3s ease;
-}
-.skip-link:focus {
-  top: 0;
+  text-align: center;
 }
 
-/* Seções e botões */
-.duas-secoes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+/* Título do cabeçalho */
+.titulo-loja {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif; /* garante a fonte aqui também */
 }
 
-/* Botões primários com efeitos modernos e responsivos */
-.btn-primario {
-  background-color: #007bff;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Subtítulo do cabeçalho */
+.subtitulo {
   font-size: 1.2em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-  text-decoration: none;
-}
-.btn-primario:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.btn-primario:focus {
-  outline: 3px solid #0056b3;
-  outline-offset: 2px;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Navbar fixa com fundo sutil e efeito de blur */
@@ -84,12 +65,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
-.nav-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 .logo-nome {
   display: flex;
@@ -108,7 +83,7 @@ nav {
   color: #222;
 }
 
-/* Lista de navegação horizontal */
+/* Lista de navegação */
 ul {
   list-style: none;
   display: flex;
@@ -129,76 +104,15 @@ ul li a.active {
   color: #fff;
 }
 
-/* Cabeçalho com efeito de gradiente e sombra */
-header.cabecalho {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 60px 20px;
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-  color: #fff;
-  text-align: center;
-}
-.titulo-loja {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-.subtitulo {
-  font-size: 1.2em;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-/* Botões de destaque na página inicial com efeito de profundidade */
-.botoes-inicio {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.botoes-inicio .btn {
-  padding: 16px 32px;
-  background: linear-gradient(135deg, #31ce01, #feb47b);
-  color: #fff;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1em;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.botoes-inicio .btn:hover {
-  background: linear-gradient(135deg, #feb47b, #31ce01);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-}
-
 /* Grid de temas e produtos com cartões responsivos (modo desktop) */
 .grid-temas {
   display: grid;
-  /* Configuração padrão para telas grandes (acima de 1024px) */
   grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
 
-/* REMOVENDO as regras de media que ajustam para telas menores */
-/*
-@media(max-width: 1024px) and (min-width: 768px) {
-  .grid-temas {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media(max-width: 768px) {
-  .grid-temas {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-*/
-
+/* Cartões com imagens e conteúdo */
 .card {
   background-color: #fff;
   border-radius: 20px;
@@ -218,32 +132,30 @@ header.cabecalho {
 .card:hover img {
   transform: scale(1.05);
 }
-.card-content {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
 .card strong {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3em;
   color: #222;
 }
+
+/* Botão de solicitar orçamento com cor verde e efeito ao passar o mouse */
 .solicitar-btn {
-  background-color: #1d7c00;
-  color: #fff;
+  background: #28a745; /* Verde padrão */
+  border: none;
   padding: 12px 24px;
-  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: all 0.3s;
+  color: #fff; /* Cor do texto */
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 8px; /* Arredondamento opcional */
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Caso seja um link */
 }
 .solicitar-btn:hover {
-  background-color: #eb6750;
-  transform: translateY(-2px);
+  background-color: #218838; /* Tom de verde mais escuro ao passar o mouse */
 }
 
 /* Seção de festas com grid responsivo */
@@ -284,7 +196,7 @@ header.cabecalho {
   text-align: center;
 }
 
-/* Formulário responsivo com espaçamento confortável */
+/* Formulário responsivo e estilizado */
 #formulario-container {
   background-color: #fff;
   max-width: 750px;
@@ -347,7 +259,7 @@ button[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
-/* Rodapé com sombra sutil */
+/* Rodapé */
 footer {
   margin-top: 60px;
   padding: 30px 20px;
@@ -358,7 +270,7 @@ footer {
   box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
 }
 
-/* Animações fade-up modernas */
+/* Animações fade-up */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -368,37 +280,3 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* REMOVIDAS as regras de responsividade para telas menores */
-/*
-@media(max-width: 1024px) {
-  body {
-    padding: 15px;
-  }
-  .botoes-inicio {
-    gap: 15px;
-  }
-}
-@media(max-width: 768px) {
-  header.cabecalho {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 10px;
-    border-radius: 0;
-  }
-  body {
-    padding-top: 80px; 
-  }
-  header.cabecalho h1.titulo-loja {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-  }
-  header.cabecalho .subtitulo {
-    font-size: 1em;
-  }
-  header.cabecalho .logo {
-    width: 50px;
-  }
-}
-*/
