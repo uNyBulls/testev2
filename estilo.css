@@ -5,14 +5,14 @@
   box-sizing: border-box;
 }
 
-/* Corrigido: adiciona padding-top ao body para evitar sobreposição do cabeçalho sticky */
+/* Corrigido: adiciona padding-top ao body para evitar sobreposição do cabeçalho fixo */
 body {
   font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
   background-color: #fafafa;
   color: #333;
   line-height: 1.6;
   padding: 20px;
-  padding-top: 100px; /* Ajuste aqui conforme a altura do seu cabeçalho */
+  padding-top: 100px; /* Ajuste aqui conforme a altura do seu cabeçalho fixo */
 }
 
 /* ===== Tipografia ===== */
@@ -74,8 +74,9 @@ nav {
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
   padding: 12px 24px;
-  position: sticky;
+  position: fixed; /* aqui foi alterado de sticky para fixed */
   top: 0;
+  width: 100%;
   z-index: 999;
   transition: all 0.3s ease;
 }
