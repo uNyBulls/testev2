@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - Day Decorações 📞✨</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Pular para conteúdo 🚀</a>
+  
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-inner">
+      <div class="logo-nome">
+        <img src="imagens/logo.png" alt="Logo Day Decorações" class="logo" />
+        <div class="titulo-loja">DAY DECORAÇÕES 🎈🎉</div>
+      </div>
+      <ul>
+        <li><a href="index.html#inicio">Início 🏠</a></li>
+        <li><a href="temas.html">Decorações 🎨</a></li>
+        <li><a href="festas.html">Festas Realizadas 🎊</a></li>
+        <li><a href="sobre.html">Sobre a Empresa 🏢</a></li>
+        <li><a href="contato.html" class="active">Contato 📞</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho" id="inicio">
+    <h1 class="titulo-loja">Contato 📱✨</h1>
+    <p class="subtitulo">Estamos prontos para ajudar! Entre em contato conosco para solicitar orçamentos, tirar dúvidas ou agendar uma visita. 🤝🎉</p>
+  </header>
+
+  <!-- Seção principal -->
+  <section>
+    <!-- Formulário de contato -->
+    <div id="formulario-container" style="max-width: 900px; margin: auto; padding: 40px 20px;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Fale Conosco 📩</h2>
+      <form id="whatsappForm">
+        <label for="nome"><strong>Nome 📝</strong></label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email"><strong>Email 📧</strong></label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefone"><strong>Telefone 📞</strong></label>
+        <input type="tel" id="telefone" name="telefone" value="41 99605-9852" required />
+
+        <label for="mensagem"><strong>Mensagem 💬</strong></label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar pelo WhatsApp 🚀</button>
+      </form>
+    </div>
+
+    <!-- Informações de contato e mapa -->
+    <div style="margin-top: 40px;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Nossos Contatos 📍</h2>
+      
+      <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+        <i class="fas fa-map-marker-alt" style="font-size: 24px; color: #e74c3c;"></i>
+        <div>
+          <h3>Endereço 🏢</h3>
+          <p>Rua Hélio Bassetti, Nº 403, CEP 83454-100</p>
+        </div>
+      </div>
+      
+      <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+        <i class="fas fa-phone" style="font-size: 24px; color: #3498db;"></i>
+        <div>
+          <h3>Telefone 📱</h3>
+          <p>(41) 99605-9852</p>
+        </div>
+      </div>
+      
+      <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+        <i class="fas fa-envelope" style="font-size: 24px; color: #2ecc71;"></i>
+        <div>
+          <h3>Email 📧</h3>
+          <p>freitasdayane315@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div style="margin-top: 30px;">
+        <iframe src="https://www.google.com/maps?q=Rua Hélio Bassetti, 403, CEP 83454-100&output=embed" width="100%" height="250" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer style="text-align: center; padding: 20px; background: #f0f0f0;">
+    <p>&copy; 2025 Day Decorações. Todos os direitos reservados. ✨🎉</p>
+  </footer>
+
+  <script>
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = encodeURIComponent(document.getElementById('nome').value);
+      const email = encodeURIComponent(document.getElementById('email').value);
+      const telefone = encodeURIComponent(document.getElementById('telefone').value);
+      const mensagem = encodeURIComponent(document.getElementById('mensagem').value);
+      const texto = `Olá, gostaria de um orçamento.%0A%0ANome: ${nome}%0AEmail: ${email}%0ATelefone: ${telefone}%0AMensagem: ${mensagem}`;
+      const numeroWhatsApp = '5541996059852';
+      window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, '_blank');
+    });
+  </script>
+</body>
+</html>

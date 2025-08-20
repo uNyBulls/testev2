@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Day Decorações — Mini decorações criativas e modernas para transformar seus momentos em lembranças inesquecíveis." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day Decorações 🎉✨</title>
+  <!-- Link para o CSS -->
+  <link rel="stylesheet" href="estilo.css" />
+  <!-- Script externo, se necessário -->
+  <script src="caminho/do/seu/arquivo/script.js" defer></script>
+  <style>
+    /* Estilo atualizado para botões principais */
+    .btn-primario {
+      background-color: #007bff; /* azul padrão */
+      color: #fff; /* texto branco */
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primario:hover {
+      background-color: #0056b3; /* tom mais escuro no hover */
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .btn-primario:focus {
+      outline: 3px solid #0056b3; /* destaque ao focar */
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Link de pular conteúdo ( acessibilidade) -->
+  <a class="skip-link" href="#inicio">Pular para conteúdo 🚀</a>
+
+  <!-- Navbar -->
+  <nav aria-label="Navegação principal" class="navbar">
+    <div class="nav-inner wrapper">
+      <div class="logo-nome">
+        <img src="imagens/logo.png" alt="Logo Day Decorações" class="logo" />
+        <div class="titulo-loja">DAY DECORAÇÕES 🎈</div>
+      </div>
+      <ul class="menu">
+        <li><a href="#inicio">Início 🏠</a></li>
+        <li><a href="temas.html">Decorações 🎨</a></li>
+        <li><a href="festas.html">Festas Realizadas 🎉</a></li>
+        <li><a href="sobre.html">Sobre a Empresa 🏢</a></li>
+        <li><a href="contato.html">Contato 📞</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="inicio" class="cabecalho wrapper">
+    <img src="imagens/logo.png" alt="Logo Day Decorações" class="logo" loading="lazy" />
+    <h1 class="titulo-loja">DAY DECORAÇÕES 🎊</h1>
+    <p class="subtitulo">Transformando momentos em lembranças inesquecíveis ✨</p>
+  </header>
+
+  <section class="banner wrapper duas-secoes">
+    <!-- Temas -->
+    <div class="section-box">
+      <h2 class="section-title">Temas de Mini Decorações 🖼️</h2>
+      <p>Conheça nossos temas criativos para festas e eventos 🎈.</p>
+      <a href="temas.html" class="btn-primario">Ver Temas 📁</a>
+    </div>
+    <!-- Festas -->
+    <div class="section-box">
+      <h2 class="section-title">Festas Realizadas 🥳</h2>
+      <p>Veja algumas festas que já realizamos 🎂.</p>
+      <a href="festas.html" class="btn-primario">Ver Festas 🎥</a>
+    </div>
+  </section>
+
+  <!-- Corpo principal (se necessário, aqui pode colocar mais conteúdo) -->
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Day Decorações. Todos os direitos reservados. 🌟</p>
+  </footer>
+
+  <!-- Scripts de funcionalidades internas -->
+  <script>
+    // Animações fade-up
+    (function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    })();
+
+    // Lightbox para galeria (se houver)
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      if (overlay) {
+        const imgEl = document.getElementById('lbImg');
+        const capEl = document.getElementById('lbCap');
+        const btnPrev = document.getElementById('lbPrev');
+        const btnNext = document.getElementById('lbNext');
+        const btnClose = document.getElementById('lbClose');
+
+        const images = Array.from(document.querySelectorAll('.galeria .card img'));
+        let indexAtual = -1;
+        let lastFocused = null;
+
+        images.forEach((img, i) => {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.setAttribute('aria-label', `Ampliar imagem: ${img.alt || 'foto'}`);
+          img.addEventListener('click', () => abrir(i));
+          img.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Enter' || ev.key === ' ') {
+              ev.preventDefault();
+              abrir(i);
+            }
+          });
+        });
+
+        function abrir(i) {
+          if (i < 0 || i >= images.length) return;
+          indexAtual = i;
+          const src = images[i].getAttribute('src');
+          const alt = images[i].getAttribute('alt') || '';
+          imgEl.src = src;
+          imgEl.alt = alt;
+          capEl.textContent = alt;
+          overlay.classList.add('open');
+          overlay.setAttribute('aria-hidden', 'false');
+          lastFocused = document.activeElement;
+          document.getElementById('lbClose').focus();
+          document.body.style.overflow = 'hidden';
+        }
+
+        function fechar() {
+          overlay.classList.remove('open');
+          overlay.setAttribute('aria-hidden', 'true');
+          imgEl.src = '';
+          document.body.style.overflow = '';
+          if (lastFocused) lastFocused.focus();
+        }
+
+        function prox() { abrir((indexAtual + 1) % images.length); }
+        function ant() { abrir((indexAtual - 1 + images.length) % images.length); }
+
+        document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); ant(); });
+        document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); prox(); });
+        document.getElementById('lbClose').addEventListener('click', (e) => { e.stopPropagation(); fechar(); });
+
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) fechar();
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (!overlay.classList.contains('open')) return;
+          if (e.key === 'Escape') fechar();
+          if (e.key === 'ArrowRight') prox();
+          if (e.key === 'ArrowLeft') ant();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
