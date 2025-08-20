@@ -135,9 +135,10 @@ ul li a.active {
 .card:hover img {
   transform: scale(1.05);
 }
+/* Diminuir fonte dos nomes dos temas */
 .card strong {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.3em;
+  font-size: 1em; /* ajustado para menor tamanho */
   color: #222;
 }
 
@@ -147,7 +148,7 @@ ul li a.active {
   border: none;
   padding: 12px 24px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 0.9em; /* ajustado para menor tamanho */
   font-weight: 600;
   cursor: pointer;
   color: #fff; /* Cor do texto */
@@ -301,29 +302,4 @@ footer {
   .titulo-loja {
     font-size: 2em;
   }
-
-  /* Você pode ajustar também botões e outros elementos aqui se necessário */
-}
-/* ... seu CSS existente ... */
-
-/* =======================
-   Estilos para dispositivos móveis
-   ======================= */
-@media(max-width: 768px) {
-  /* Ajusta a grade de temas para exibir 3 por linha, com prioridade maior */
-  .grid-temas {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-
-  /* Centraliza o conteúdo dos cartões e nomes dos temas */
-  .card {
-    align-items: center;
-  }
-
-  /* Opcional: ajusta o tamanho do título e elementos para caber melhor */
-  .titulo-loja {
-    font-size: 2em;
-  }
-
-  /* Outros ajustes que desejar aqui */
 }
