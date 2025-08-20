@@ -12,7 +12,7 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 20px;
-  padding-top: 100px; /* Ajuste aqui conforme a altura do seu cabeçalho fixo */
+  padding-top: 80px; /* Ajuste para a altura do seu cabeçalho fixo */
 }
 
 /* ===== Tipografia ===== */
@@ -74,7 +74,7 @@ nav {
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
   padding: 12px 24px;
-  position: fixed; /* aqui foi alterado de sticky para fixed */
+  position: fixed; /* fixo no topo */
   top: 0;
   width: 100%;
   z-index: 999;
@@ -228,7 +228,7 @@ header.cabecalho {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  margin-top: 60px; /* Espaçamento superior ajustado */
+  margin-top: 60px;
   padding: 20px;
 }
 
@@ -359,6 +359,7 @@ footer {
   }
 }
 @media(max-width: 768px) {
+  /* Ajustar o nav para ficar em coluna e ocupar menos espaço */
   nav {
     padding: 10px 15px;
   }
@@ -366,6 +367,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+  /* Menu em coluna, com itens mais acessíveis */
   ul {
     flex-direction: column;
     width: 100%;
@@ -374,26 +376,51 @@ footer {
     width: 100%;
     margin-bottom: 10px;
   }
+  /* Grid de temas e festas: colunas menores e mais flexíveis */
   .grid-temas,
   .festas {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
   }
+  /* Ajuste no container do formulário */
   #formulario-container {
     padding: 30px 20px;
     margin: 30px 10px;
   }
+  /* Tamanho do título do formulário */
   #formulario-container h2 {
     font-size: 1.8em;
   }
+  /* Botões do formulário maiores para facilitar o toque */
   button[type="submit"] {
     padding: 14px;
+    font-size: 1.2em;
   }
+  /* Layout da logo e título na navbar */
   .logo-nome {
     flex-direction: column;
     align-items: flex-start;
   }
   .logo {
     margin-bottom: 10px;
+  }
+  /* Ajuste no cabeçalho principal */
+  header.cabecalho {
+    padding: 40px 20px;
+  }
+  .titulo-loja {
+    font-size: 2.2em;
+  }
+  .subtitulo {
+    font-size: 1em;
+  }
+  /* Ajustar tamanhos de fontes gerais */
+  h1, h2 {
+    font-size: 1.5em;
+  }
+  /* Botões na página inicial */
+  .botoes-inicio .btn {
+    padding: 14px 20px;
+    font-size: 1.1em;
   }
 }
