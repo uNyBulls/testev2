@@ -176,13 +176,29 @@ header.cabecalho {
   box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
-/* Grid de temas e produtos com cartões responsivos */
+/* Grid de temas e produtos com cartões responsivos, com ajuste para diferentes tamanhos de tela */
 .grid-temas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* Configuração padrão para telas grandes (acima de 1024px) */
+  grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
+
+/* Para telas entre 1024px e 768px, mantém 3 colunas */
+@media(max-width: 1024px) and (min-width: 768px) {
+  .grid-temas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Para telas menores que 768px, mantém 3 colunas */
+@media(max-width: 768px) {
+  .grid-temas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .card {
   background-color: #fff;
   border-radius: 20px;
