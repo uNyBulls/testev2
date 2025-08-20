@@ -12,63 +12,282 @@
 
   <!-- NAVBAR -->
   <nav aria-label="Navegação principal">
-    <div class="nav-inner" style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:rgba(255,255,255,0.9); backdrop-filter: blur(10px); position:sticky; top:0; z-index:999;">
-      <div class="logo-nome" style="display:flex; align-items:center;">
-        <img src="imagens/logo.png" alt="Logo Day Decorações" class="logo" style="width:70px; margin-right:16px;" />
-        <div class="titulo-loja" style="font-family:'Montserrat', sans-serif; font-size:2em; font-weight:700; color:#222;">DAY DECORAÇÕES 🎈</div>
+    <div class="nav-inner">
+      <div class="logo-nome">
+        <img src="imagens/logo.png" alt="Logo Day Decorações" class="logo" />
+        <div class="titulo-loja">DAY DECORAÇÕES 🎈</div>
       </div>
-      <ul style="list-style:none; display:flex; gap:20px; flex-wrap:wrap; margin:0; padding:0;">
-        <li><a href="index.html" style="text-decoration:none; color:#555;">Início 🏠</a></li>
-        <li><a href="temas.html" class="active" style="text-decoration:none; color:#007bff; font-weight:600;">Decorações 🎨</a></li>
-        <li><a href="festas.html" style="text-decoration:none; color:#555;">Festas Realizadas 🎉</a></li>
-        <li><a href="sobre.html" style="text-decoration:none; color:#555;">Sobre a Empresa 🏢</a></li>
-        <li><a href="contato.html" style="text-decoration:none; color:#555;">Contato 📞</a></li>
+      <ul>
+        <li><a href="index.html">Início 🏠</a></li>
+        <li><a href="temas.html" class="active">Decorações 🎨</a></li>
+        <li><a href="festas.html">Festas Realizadas 🎉</a></li>
+        <li><a href="sobre.html">Sobre a Empresa 🏢</a></li>
+        <li><a href="contato.html">Contato 📞</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- CABEÇALHO -->
   <header class="cabecalho wrapper" id="inicio">
-    <h1 class="titulo-loja" style="font-family:'Montserrat', sans-serif;">Temas de Mini Decorações 🎊</h1>
-    <p class="subtitulo" style="font-family:'Montserrat', sans-serif;">Explore nossos temas criativos para festas e eventos ✨</p>
+    <h1 class="titulo-loja">Temas de Mini Decorações 🎊</h1>
+    <p class="subtitulo">Explore nossos temas criativos para festas e eventos ✨</p>
   </header>
 
   <!-- SEÇÃO COM TODOS OS PRODUTOS/TEMAS -->
   <section class="temas-section wrapper" style="margin-top:60px;">
     <div class="grid-temas">
+      
       <!-- Cartões com botão que chama a função JS -->
       <!-- 31 temas -->
-      <div class="card"><img src="imagens/produtos/tema1.jpg" alt="Stitch" /><div class="card-content"><strong>Stitch 🧵</strong><span class="solicitar-btn" onclick="mostrarFormulario('Stitch')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema2.jpg" alt="Jardim Encantado" /><div class="card-content"><strong>Jardim Encantado 🌸</strong><span class="solicitar-btn" onclick="mostrarFormulario('Jardim Encantado')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema3.jpg" alt="Mickey" /><div class="card-content"><strong>Mickey 🐭</strong><span class="solicitar-btn" onclick="mostrarFormulario('Mickey')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema4.jpg" alt="Capivara" /><div class="card-content"><strong>Capivara 🦦</strong><span class="solicitar-btn" onclick="mostrarFormulario('Capivara')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema5.jpg" alt="Chá Revelação" /><div class="card-content"><strong>Chá Revelação 🎀</strong><span class="solicitar-btn" onclick="mostrarFormulario('Chá Revelação')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema6.jpg" alt="Vingadores" /><div class="card-content"><strong>Vingadores 🦸‍♂️</strong><span class="solicitar-btn" onclick="mostrarFormulario('Vingadores')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema7.jpg" alt="Minnie" /><div class="card-content"><strong>Minnie 🐭</strong><span class="solicitar-btn" onclick="mostrarFormulario('Minnie')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema8.jpg" alt="Homem-Aranha" /><div class="card-content"><strong>Homem-Aranha 🕷️</strong><span class="solicitar-btn" onclick="mostrarFormulario('Homem-Aranha')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema9.jpg" alt="Bobbie Goods" /><div class="card-content"><strong>Bobbie Goods 🧸</strong><span class="solicitar-btn" onclick="mostrarFormulario('Bobbie Goods')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema10.jpg" alt="Patrulha Canina" /><div class="card-content"><strong>Patrulha Canina 🐶</strong><span class="solicitar-btn" onclick="mostrarFormulario('Patrulha Canina')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema11.jpg" alt="Safari" /><div class="card-content"><strong>Safari 🦁</strong><span class="solicitar-btn" onclick="mostrarFormulario('Safari')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema12.jpg" alt="Festa Junina" /><div class="card-content"><strong>Festa Junina 🎉</strong><span class="solicitar-btn" onclick="mostrarFormulario('Festa Junina')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema13.jpg" alt="Caminhão" /><div class="card-content"><strong>Caminhão 🚚</strong><span class="solicitar-btn" onclick="mostrarFormulario('Caminhão')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema14.jpg" alt="Minecraft" /><div class="card-content"><strong>Minecraft ⛏️</strong><span class="solicitar-btn" onclick="mostrarFormulario('Minecraft')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema15.jpg" alt="Ursinhos Carinhosos" /><div class="card-content"><strong>Ursinhos Carinhosos 💖</strong><span class="solicitar-btn" onclick="mostrarFormulario('Ursinhos Carinhosos')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema16.jpg" alt="Moana" /><div class="card-content"><strong>Moana 🌺</strong><span class="solicitar-btn" onclick="mostrarFormulario('Moana')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema17.jpg" alt="Wandinha" /><div class="card-content"><strong>Wandinha 🧙‍♀️</strong><span class="solicitar-btn" onclick="mostrarFormulario('Wandinha')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema18.jpg" alt="Minions" /><div class="card-content"><strong>Minions 🟡</strong><span class="solicitar-btn" onclick="mostrarFormulario('Minions')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema19.jpg" alt="Sonic" /><div class="card-content"><strong>Sonic 🦔</strong><span class="solicitar-btn" onclick="mostrarFormulario('Sonic')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema20.jpg" alt="Ursinho Rei" /><div class="card-content"><strong>Ursinho Rei 👑</strong><span class="solicitar-btn" onclick="mostrarFormulario('Ursinho Rei')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema21.jpg" alt="PJ Masks" /><div class="card-content"><strong>PJ Masks 🦸‍♂️</strong><span class="solicitar-btn" onclick="mostrarFormulario('PJ Masks')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema22.jpg" alt="Smurf" /><div class="card-content"><strong>Smurf 🔵</strong><span class="solicitar-btn" onclick="mostrarFormulario('Smurf')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema23.jpg" alt="Toy Story" /><div class="card-content"><strong>Toy Story 🤠</strong><span class="solicitar-btn" onclick="mostrarFormulario('Toy Story')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema24.jpg" alt="Monstros S.A." /><div class="card-content"><strong>Monstros S.A. 👹</strong><span class="solicitar-btn" onclick="mostrarFormulario('Monstros S.A.')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema25.jpg" alt="Ursinha Realeza" /><div class="card-content"><strong>Ursinha Realeza 👸</strong><span class="solicitar-btn" onclick="mostrarFormulario('Ursinha Realeza')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema26.jpg" alt="Skye" /><div class="card-content"><strong>Skye 🦅</strong><span class="solicitar-btn" onclick="mostrarFormulario('Skye')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema27.jpg" alt="Divertidamente2" /><div class="card-content"><strong>Divertidamente2 😀</strong><span class="solicitar-btn" onclick="mostrarFormulario('Divertidamente2')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema28.jpg" alt="Hulk" /><div class="card-content"><strong>Hulk 💪</strong><span class="solicitar-btn" onclick="mostrarFormulario('Hulk')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema29.jpg" alt="Mulher Maravilha" /><div class="card-content"><strong>Mulher Maravilha 🦸‍♀️</strong><span class="solicitar-btn" onclick="mostrarFormulario('Mulher Maravilha')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema30.jpg" alt="Galinha Pintadinha" /><div class="card-content"><strong>Galinha Pintadinha 🐥</strong><span class="solicitar-btn" onclick="mostrarFormulario('Galinha Pintadinha')">Solicitar Orçamento</span></div></div>
-      <div class="card"><img src="imagens/produtos/tema31.jpg" alt="Lady bug" /><div class="card-content"><strong>Lady bug 🐞</strong><span class="solicitar-btn" onclick="mostrarFormulario('Lady bug')">Solicitar Orçamento</span></div></div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema1.jpg" alt="Stitch" />
+        <div class="card-content">
+          <strong>Stitch 🧵</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Stitch')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema2.jpg" alt="Jardim Encantado" />
+        <div class="card-content">
+          <strong>Jardim Encantado 🌸</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Jardim Encantado')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema3.jpg" alt="Mickey" />
+        <div class="card-content">
+          <strong>Mickey 🐭</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Mickey')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema4.jpg" alt="Capivara" />
+        <div class="card-content">
+          <strong>Capivara 🦦</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Capivara')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema5.jpg" alt="Chá Revelação" />
+        <div class="card-content">
+          <strong>Chá Revelação 🎀</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Chá Revelação')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema6.jpg" alt="Vingadores" />
+        <div class="card-content">
+          <strong>Vingadores 🦸‍♂️</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Vingadores')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema7.jpg" alt="Minnie" />
+        <div class="card-content">
+          <strong>Minnie 🐭</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Minnie')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema8.jpg" alt="Homem-Aranha" />
+        <div class="card-content">
+          <strong>Homem-Aranha 🕷️</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Homem-Aranha')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema9.jpg" alt="Bobbie Goods" />
+        <div class="card-content">
+          <strong>Bobbie Goods 🧸</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Bobbie Goods')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema10.jpg" alt="Patrulha Canina" />
+        <div class="card-content">
+          <strong>Patrulha Canina 🐶</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Patrulha Canina')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema11.jpg" alt="Safari" />
+        <div class="card-content">
+          <strong>Safari 🦁</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Safari')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema12.jpg" alt="Festa Junina" />
+        <div class="card-content">
+          <strong>Festa Junina 🎉</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Festa Junina')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema13.jpg" alt="Caminhão" />
+        <div class="card-content">
+          <strong>Caminhão 🚚</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Caminhão')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema14.jpg" alt="Minecraft" />
+        <div class="card-content">
+          <strong>Minecraft ⛏️</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Minecraft')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema15.jpg" alt="Ursinhos Carinhosos" />
+        <div class="card-content">
+          <strong>Ursinhos Carinhosos 💖</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Ursinhos Carinhosos')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema16.jpg" alt="Moana" />
+        <div class="card-content">
+          <strong>Moana 🌺</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Moana')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema17.jpg" alt="Wandinha" />
+        <div class="card-content">
+          <strong>Wandinha 🧙‍♀️</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Wandinha')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema18.jpg" alt="Minions" />
+        <div class="card-content">
+          <strong>Minions 🟡</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Minions')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema19.jpg" alt="Sonic" />
+        <div class="card-content">
+          <strong>Sonic 🦔</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Sonic')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema20.jpg" alt="Ursinho Rei" />
+        <div class="card-content">
+          <strong>Ursinho Rei 👑</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Ursinho Rei')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema21.jpg" alt="PJ Masks" />
+        <div class="card-content">
+          <strong>PJ Masks 🦸‍♂️</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('PJ Masks')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema22.jpg" alt="Smurf" />
+        <div class="card-content">
+          <strong>Smurf 🔵</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Smurf')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema23.jpg" alt="Toy Story" />
+        <div class="card-content">
+          <strong>Toy Story 🤠</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Toy Story')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema24.jpg" alt="Monstros S.A." />
+        <div class="card-content">
+          <strong>Monstros S.A. 👹</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Monstros S.A.')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema25.jpg" alt="Ursinha Realeza" />
+        <div class="card-content">
+          <strong>Ursinha Realeza 👸</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Ursinha Realeza')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema26.jpg" alt="Skye" />
+        <div class="card-content">
+          <strong>Skye 🦅</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Skye')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema27.jpg" alt="Divertidamente2" />
+        <div class="card-content">
+          <strong>Divertidamente2 😀</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Divertidamente2')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema28.jpg" alt="Hulk" />
+        <div class="card-content">
+          <strong>Hulk 💪</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Hulk')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema29.jpg" alt="Mulher Maravilha" />
+        <div class="card-content">
+          <strong>Mulher Maravilha 🦸‍♀️</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Mulher Maravilha')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema30.jpg" alt="Galinha Pintadinha" />
+        <div class="card-content">
+          <strong>Galinha Pintadinha 🐥</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Galinha Pintadinha')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="imagens/produtos/tema31.jpg" alt="Lady bug" />
+        <div class="card-content">
+          <strong>Lady bug 🐞</strong>
+          <span class="solicitar-btn" onclick="mostrarFormulario('Lady bug')">Solicitar Orçamento</span>
+        </div>
+      </div>
+      
     </div>
   </section>
 
@@ -78,11 +297,11 @@
     <form id="orcamentoForm" action="#" method="post">
       <input type="hidden" id="tema" name="tema" />
 
-      <!-- Novo campo visível do tema -->
+      <!-- Campo de tema visual -->
       <label for="temaVisual">Tema Selecionado:</label>
       <input type="text" id="temaVisual" name="temaVisual" readonly />
 
-      <!-- Seus campos adicionais -->
+      <!-- Outros campos do formulário -->
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required />
 
@@ -113,12 +332,13 @@
     </form>
   </div>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Day Decorações. Todos os direitos reservados. ✨</p>
   </footer>
 
   <script>
-    // Função para mostrar o formulário e preencher o tema
+    // Função para mostrar o formulário com tema
     function mostrarFormulario(nome) {
       const container = document.getElementById('formulario-container');
       document.getElementById('tema').value = nome;
@@ -129,9 +349,9 @@
     }
 
     // Envio do formulário
-    (function(){
+    (function() {
       const form = document.getElementById('orcamentoForm');
-      form.addEventListener('submit', function(event){
+      form.addEventListener('submit', function(event) {
         event.preventDefault();
         const nome = form.nome.value.trim();
         const telefone = form.telefone.value.trim();
@@ -142,7 +362,7 @@
         const pagamento = form.pagamento.value;
         const mensagem = form.mensagem.value.trim();
 
-        if(!nome || !telefone || !email || !endereco || !dataFesta || !pagamento || !mensagem){
+        if (!nome || !telefone || !email || !endereco || !dataFesta || !pagamento || !mensagem) {
           alert('Por favor, preencha todos os campos obrigatórios.');
           return;
         }
